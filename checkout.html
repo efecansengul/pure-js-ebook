@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Page</title>
+    <!--styles-->
+    <link href="checkout.css" rel="stylesheet" />
+    <!--checkoutjs-->
+    <script type="module" src="js/checkout.js" defer></script>
+  </head>
+  <body>
+    <header class="container">
+      <a href="./index.html"><h1>E-bookStore</h1></a>
+    </header>
+    <main class="checkout-grid">
+      <div class="address-payment">
+        <div>
+          <h3>Delivery Address</h3>
+          <input
+            type="text"
+            name="address"
+            id="address"
+            placeholder="Enter your address"
+          />
+        </div>
+        <div class="payment-method">
+          <h3>Select Your Payment Method</h3>
+          <label>
+            <input
+              type="radio"
+              name="payment"
+              class="payments"
+              value="credit-card"
+            />
+            Credit Card
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="payment"
+              class="payments"
+              value="paypal"
+            />
+            PayPal
+          </label>
+        </div>
+      </div>
+      <div class="basket-checkout-summary">
+        <div class="basket-summary">
+          <h3>Basket Summary</h3>
+          <ul class="add-cart-li"></ul>
+        </div>
+        <div class="checkout-summary">
+          <div class="adress-bar">
+            <p>Address:</p>
+            <p class="address"></p>
+          </div>
+          <div class="payment-bar">
+            <label>Payment Method:</label>
+            <p class="payment"></p>
+          </div>
+          <div class="total-bar">
+            <p class="total-amount">
+              Total Amount: <span class="total-amount-span"></span>
+            </p>
+          </div>
+          <div class="button-class">
+            <button class="button" type="button">Buy</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

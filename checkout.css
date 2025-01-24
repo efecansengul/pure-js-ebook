@@ -1,0 +1,169 @@
+:root {
+  --color-black: rgb(13, 17, 54);
+  --color-gray: rgb(119, 121, 140);
+  --color-gray-light: rgb(247, 247, 247);
+  --color-white: rgb(255, 255, 255);
+  --color-primary: rgb(0, 158, 127);
+  --color-secondary: rgb(0, 102, 82);
+  --font-size-s: 12px;
+  --font-size-m: 14px;
+  --font-size-l: 18px;
+  --font-size-xl: 24px;
+  --font-weight-normal: 400;
+  --font-weight-semi: 500;
+  --font-weight-bold: 700;
+  --border-radius: 6px;
+  --box-shadow: 0px 21px 36px rgb(0 0 0 /5%);
+  --font-family: "Times New Roman", Times, serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--color-gray-light);
+  overflow: visible;
+  font-family: var(--font-family);
+}
+.container {
+  margin: 0 auto;
+  overflow: visible;
+}
+header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 999; /* Üstte kalmasını sağlamak için */
+  width: 100%;
+  height: 72px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  font-family: var(--font-family);
+  background-color: var(--color-white);
+}
+header a {
+  font-size: var(--font-size-l);
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: var(--font-weight-normal);
+}
+/* Ana grid yapısı */
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Soldaki alan daha geniş */
+  gap: 20px; /* Alanlar arasında boşluk */
+  padding: 20px;
+}
+
+.address-payment,
+.basket-checkout-summary {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+.address-payment {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+/* Form alanları */
+input[type="text"] {
+  width: 100%;
+  background-color: var(--color-gray-light);
+  box-shadow: var(--box-shadow);
+  height: auto;
+  padding: 10px;
+  margin-top: 10px;
+  outline: none;
+  border: none;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+}
+
+.basket-summary h3 {
+  margin-bottom: 10px;
+}
+.payment-method {
+  margin-top: 200px;
+}
+.basket-item {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  height: 0px;
+  margin-top: 60px;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+.basket-title-authors {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.basket-title-authors > h3 {
+  color: var(--color-gray);
+  font-weight: var(--font-weight-bold);
+}
+.basket-title-authors > p {
+  color: var(--color-gray);
+  font-weight: var(--font-weight-semi);
+}
+
+.increase-decrease-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+}
+.increase,
+.decrease {
+  width: 15px;
+  padding: 2px;
+  border: none;
+  cursor: pointer;
+}
+.checkout-summary {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  height: 100px;
+  justify-content: center;
+  background-color: var(--color-white);
+  width: 100%;
+
+  gap: 10px;
+}
+.checkout-summary.address-bar {
+  z-index: 20000;
+  margin-top: 200px;
+}
+
+.address {
+  max-width: 60ch; /* Ortalama 60 karakterlik bir genişlik (yaklaşık 10 kelime) */
+  line-height: 1.6; /* Satır yüksekliği */
+  overflow-wrap: break-word; /* Uzun kelimelerde taşma kontrolü */
+}
+.button-class {
+  width: 100%;
+}
+.button {
+  width: 100%;
+  padding: 8px;
+  border-radius: var(--border-radius);
+  border: none;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  cursor: pointer;
+}
